@@ -3,13 +3,12 @@ package com.meituan.mdp.module1;
 import com.meituan.mdp.module2.EnglishCat;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
 
 @Import(EnglishCat.class)
 @ImportResource({"classpath:spring/applicationContext.xml"})
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
+@SpringBootApplication
 public class ApplicationLoader {
 
     public static void main(String[] args) {
